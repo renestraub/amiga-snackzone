@@ -1,0 +1,35 @@
+* Header file generated on Tuesday 13-Apr-1993 14:17:44 by Bobi 2.99m (Apr 12 1992)
+
+Item0:		EQU	0
+Item1:		EQU	506
+Item2:		EQU	1012
+Item3:		EQU	1518
+Item4:		EQU	2024
+Item5:		EQU	2530
+Item6:		EQU	3036
+Item7:		EQU	3462
+Item8:		EQU	3968
+Item9:		EQU	4474
+Item10:		EQU	4980
+Item11:		EQU	5406
+Item12:		EQU	5912
+Item13:		EQU	6418
+Item14:		EQU	6924
+Item15:		EQU	7430
+Item16:		EQU	7936
+Item17:		EQU	8362
+Item18:		EQU	8868
+Item19:		EQU	9374
+Item20:		EQU	9880
+Item21:		EQU	10386
+Item22:		EQU	10892
+Item23:		EQU	11398
+Item24:		EQU	11904
+Item25:		EQU	12410
+Item26:		EQU	12836
+Item27:		EQU	13342
+Item28:		EQU	13848
+Item29:		EQU	14354
+Item30:		EQU	14780
+
+Item_FILESIZE:	EQU	15290

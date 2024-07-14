@@ -1,0 +1,71 @@
+VERBOSE
+SMALLCODE
+
+FROM
+
+Main.o
+ Gfx.o
+ Collision.o
+ JoyStick.o
+ Bobs.o
+ Copper.o
+ DosFileNames.o
+ ExecBase.o
+ Interface.o
+ Menu.o
+ Scroll.o
+ Panel.o
+ Sprite.o
+ RonnyMove.o
+ Enemy.o
+ CXM33.o
+ Level.o
+ Flags1.o 
+ Flags11.o
+ Blase.o
+ Select.o
+ Show.o
+ IFF.o
+ Katze.o
+ UBahn.o
+ Zuhaelter.o
+ Tuersteher.o
+ Arbeiter.o
+ Tankstelle.o
+ Skater.o
+ Disco.o
+ Kiosk.o
+ Haendler.o
+ Kinderwagen.o
+ Huber.o
+ Snack.o
+ Mars.o
+ Spock.o
+ Blondine.o
+ Musiker.o
+ Roboter.o
+ Fremder.o
+ Oma.o
+ Wespe.o
+ Sound.o
+ Kino.o
+ Bigsprite.o
+ StromGame.o
+ Schrotti.o
+ Kneipe.o
+ Platte.o
+ Museum.o
+ Rocker.o
+ AutoHandler.o
+ EndHandler.o
+ SkaterGame.o
+ SkaterDialog.o
+ Money.o
+ Agent.o
+ GetCPUType.o
+
+TO
+Main
+
+LIB
+ lib:sc.lib

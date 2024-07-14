@@ -1,0 +1,119 @@
+PAL:	EQU	16*16
+NTSC:	EQU	12*16
+
+MasterVolume:	EQU	10		; Lautstärke des Songs
+MasterFXVolume:	EQU	64		; Lautstärke der FX's
+
+ScrWidth:	EQU	50					* ScrWidht in Bytes
+ScrHeight:	EQU	NTSC					* ScrHeight in Pixels
+ScrDepth:	EQU	5					* ScreenDepth
+Plane_SIZEOF:	EQU	ScrWidth*ScrHeight
+Scr_SIZEOF:	EQU	ScrDepth*Plane_SIZEOF
+
+NumCharPlanes:	EQU	ScrDepth
+
+PARASIZE:	EQU	100
+
+LISTSTART:	EQU	-30000
+LISTEND:	EQU	 30000
+
+CHANGE_LEVEL:	EQU	6
+OUT_OF_ENERGY:	EQU	7
+GAME_WON:	EQU	8
+ABORT_GAME:	EQU	9
+ENEMY_WINS:	EQU	10
+HERO_WINS:	EQU	11
+
+;SLOW:		EQU	1
+;FAST:		EQU	1
+
+SLOW:		EQU	2
+FAST:		EQU	2
+
+CLOUD_ID:	EQU	1
+RONNY_ID:	EQU	2
+SHOP1_ID:	EQU	3
+SHOP2_ID:	EQU	4
+SHOP3_ID:	EQU	5
+HAUS1_ID:	EQU	6
+HAUS13_ID:	EQU	7
+LADY1_ID:	EQU	8
+LADY2_ID:	EQU	9
+LADY3_ID:	EQU	10
+HERR1_ID:	EQU	11
+HERR2_ID:	EQU	12
+
+RETURN:		EQU	10
+DELETE:		EQU	8
+BACKSPACE:	EQU	7
+
+PFEIL:		EQU	128
+LEERPFEIL:	EQU	129
+TURNSTART:	EQU	130
+TURNSTOP:	EQU	135
+
+LWALK:		EQU	12
+LWALKEND:	EQU	23
+
+RDUCK:		EQU	24
+RDUCKEND:	EQU	27
+
+LSPRUNG:	EQU	10
+LSPRUNGEND:	EQU	13
+LFALL:		EQU	14
+LFALLEND:	EQU	24
+
+TREPPE:		EQU	25
+TREPPEEND:	EQU	29
+
+RWALK:		EQU	0
+RWALKEND:	EQU	11
+
+LDUCK:		EQU	28
+LDUCKEND:	EQU	31
+
+RSPRUNG:	EQU	40
+RSPRUNGEND:	EQU	43
+RFALL:		EQU	44
+RFALLEND:	EQU	54
+
+SHOOT_COLL:	EQU	%00000001
+RONNY_COLL:	EQU	%00000010
+
+RONNY_HITCOLL:	EQU	%10000000
+RONNY_STURZ:	EQU	%11000000
+
+		IFND	SZ_PANEL
+		 SZ_PANEL:	EQU	7744
+		ENDC
+
+FileSize:	EQU	-4
+
+
+	BITDEF	BOB,REMOVE,0		;* Will Remove Bob if not on Screen
+	BITDEF	BOB,ENEMY,1		;* This Bob is an EnemyBob
+	BITDEF	BOB,COLLECTABLE,2	;* This Bob is an Collectable
+	BITDEF	BOB,ENEMY2,3		;* This Bob is an EnemyBob
+
+	BITDEF	FD,JOB,0		;* This is a Job (no gadget)
+	BITDEF	FD,PROPERTIE,1		;* This is a Job (no gadget)
+
+	BITDEF	SB,ONCE,0		;* This Bob appears only one time (pro Level)
+	BITDEF	SB,VISIBLE,1		;* Bob is currently on screen
+	BITDEF	SB,SHOOT,2		;* Bob wurde einmal abgeschossen
+
+	STRUCTURE UserDataStructure,0
+		BYTE	ud_NumShoot
+		BYTE	ud_RemoveTimer
+		BYTE	ud_FallingDist
+		BYTE	ud_XMove
+
+	STRUCTURE SoundFXStructure,0
+		STRUCT	sfx_RonnyKO,4544
+		STRUCT	sfx_TakeBonus,5516
+		STRUCT	sfx_Blopp,598
+		STRUCT	sfx_Hupe,3710
+		STRUCT	sfx_Blip,1820
+		STRUCT	sfx_Aufprall,2630
+		STRUCT	sfx_Spacer,1524
+		STRUCT	sfx_DampfLok,2328

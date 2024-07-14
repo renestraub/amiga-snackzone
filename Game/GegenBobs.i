@@ -1,0 +1,118 @@
+* Header file generated on Friday 16-Apr-1993 21:01:42 by Bobi 2.99m (Apr 12 1992)
+
+Oma:		EQU	0
+GegenBob8:	EQU	554
+GegenBob9:	EQU	1120
+GegenBob10:	EQU	1674
+GegenBob11:	EQU	2240
+GegenBob12:	EQU	2842
+GegenBob13:	EQU	3432
+GegenBob14:	EQU	4538
+
+Wespen:		EQU	5128
+GegenBob16:	EQU	5182
+GegenBob17:	EQU	5236
+
+Schlaeger:	EQU	5292
+GegenBob19:	EQU	6494
+
+Bauarbeiter:	EQU	7672
+GegenBob33:	EQU	9666
+GegenBob34:	EQU	11756
+GegenBob35:	EQU	14038
+ArbeiterSub:	EQU	15408
+GegenBob37:	EQU	15704
+GegenBob38:	EQU	16000
+GegenBob39:	EQU	16296
+GegenBob40:	EQU	16592
+GegenBob41:	EQU	16888
+
+FerrariR:	EQU	17174
+GegenBob43:	EQU	19636
+FerrariL:	EQU	22098
+GegenBob45:	EQU	24560
+
+Katze:		EQU	27022
+GegenBob47:	EQU	27192
+GegenBob48:	EQU	27362
+GegenBob49:	EQU	27532
+GegenBob50:	EQU	27846
+GegenBob51:	EQU	28184
+GegenBob52:	EQU	28522
+
+Honighuber:	EQU	28812
+HonighuberSub:	EQU	33158
+GegenBob55:	EQU	34064
+GegenBob56:	EQU	34970
+GegenBob57:	EQU	35876
+GegenBob58:	EQU	36862
+GegenBob59:	EQU	37848
+
+Bauchladen:	EQU	38834
+GegenBob61:	EQU	40012
+GegenBob62:	EQU	41166
+GegenBob63:	EQU	42344
+
+Popper:		EQU	44062
+GegenBob72:	EQU	46488
+GegenBob73:	EQU	48914
+GegenBob74:	EQU	51148
+GegenBob75:	EQU	54174
+GegenBob76:	EQU	57260
+
+Hund:		EQU	59926
+GegenBob78:	EQU	60152
+GegenBob79:	EQU	60398
+GegenBob80:	EQU	60624
+GegenBob81:	EQU	60870
+GegenBob82:	EQU	61116
+GegenBob83:	EQU	61342
+GegenBob84:	EQU	61588
+
+ZuhaelterR:	EQU	61814
+GegenBob98:	EQU	62320
+GegenBob99:	EQU	62836
+GegenBob100:	EQU	63822
+GegenBob101:	EQU	64338
+GegenBob102:	EQU	64854
+ZuhaelterL:	EQU	65360
+GegenBob104:	EQU	65866
+GegenBob105:	EQU	66382
+GegenBob106:	EQU	67368
+GegenBob107:	EQU	67884
+GegenBob108:	EQU	68400
+
+FrauR:		EQU	68906
+GegenBob110:	EQU	70036
+GegenBob111:	EQU	70602
+GegenBob112:	EQU	71732
+GegenBob113:	EQU	72310
+GegenBob114:	EQU	72876
+FrauL:		EQU	73982
+GegenBob116:	EQU	75112
+GegenBob117:	EQU	75678
+GegenBob118:	EQU	76808
+GegenBob119:	EQU	77386
+GegenBob120:	EQU	77952
+KinderwagenR:	EQU	79058
+GegenBob122:	EQU	80704
+GegenBob123:	EQU	82314
+GegenBob124:	EQU	83960
+KinderwagenL:	EQU	85570
+GegenBob126:	EQU	87180
+GegenBob127:	EQU	88826
+GegenBob128:	EQU	90436
+
+ToeffL:		EQU	92082
+
+Schnuller:	EQU	94220
+
+Honigtopf:	EQU	94426
+
+SchallplatteBob: EQU	94620
+
+Agent:		EQU	95054
+
+VerbMann:	EQU	95570
+
+GegenBob_FILESIZE:	EQU	97292

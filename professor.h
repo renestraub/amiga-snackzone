@@ -1,0 +1,2 @@
+
+void ProfessorDialog(void);

@@ -1,0 +1,142 @@
+
+
+     T.F.M.X. - Soundtool            Einbinden in Maschinen- oder C-Programme
+     ------------------------------------------------------------------------
+
+            TFMX-Routine (C) 1991 by A.U.D.I.O.S. Entertainment 
+        
+
+
+        Einbau in C-Programme:
+        ----------------------
+
+        Binden Sie den Player ein, so wie Sie alle Maschinenprogramme ein-
+        binden. Laden Sie den Player, die Musikdaten, sowie die Sampledaten
+        in reservierte Speicherbereiche (die Samples müssen im Chipram
+        liegen) und bedienen Sie die Routine über einen Maschienensprache-
+        treiber. Der Player muß nicht relociert werden. Er befindet sich auf
+        der Diskette.
+
+        
+        
+        Einbinen in Maschinenprogramme:
+        -------------------------------
+
+        Das Einbinden in Maschinenprogrammeist sehr einfach und die Mög-
+        lichkeiten des Players können so voll ausgenutzt werden. Der Player
+        kann über eine Sprungtabelle leicht bedient werden.
+
+        TFMX.obj Sprungtabelle:
+
+        - Alle Routinen müssen mit "JSR" aufgerufen werden, die Prozessor-
+        Register werden gerettet. Offset in Bytes zum Anfang des Players
+        (Angaben in dezimal)
+
+        + 36 IRQIN Diese Routine muß in jedem VBI (oder 50*pro Sekunde) mit
+        einem "JSR" aufgerufen werden.
+
+        + 40 ALLOFF Schaltet den Player in einen Haltezustand und die
+        Amiga-Tonkanäle aus. Bei einem neuen Songaufruf started der Player
+        wieder.
+
+        + 44 SONGPLAY Startet neuen Song   D0.w = Neue Songnummer
+        (S0000-$001f).
+
+	+ 48 NOTEPORT Spielt einzelne Note (für Soundeffekte).
+        D0.l = Entspricht genau einer Note im Pattern $aabbcdee aa = Note
+        ($00-$2f)
+        bb = Macro ($00-$7f)
+         c = Volume ($0-$3)
+         d = Channel ($0-$03)
+        ee = Detune (pos $00-$7f/neg $ff-$80).
+        
+        + 52 INITDATA Übergibt dem Player den Anfang des Musik- und
+        Samplebereichs.
+        D0.l = ANFANGSADRESSE DES MUSIKBEREICHS
+        D1.l = ANFANGSADRESSE DES SAMPLEBEREICHS
+
+        + 56 VBION Initialisiert eigenen VBI (hängt sich in den Betriebs-
+        ystem-VBI)
+
+        + 60 VBIOFF Entfernt den Player aus dem Betriebsystem-VBI
+
+        + 64 CHANNELOFF Schaltet einzelnen Amiga-Tonkanal aus.
+        D0.w = KANALNUMMER (0-3)
+
+        + 72 FADE Dient zum langsamen Ausblenden eines Songs.
+        D0.l = ..xx..yy (xx = Geschwindigkeit, yy = Endlautstärke)
+        $00200000 Normales Fade-Out
+
+        +76 INFO Gibt in A0 die Anfangsadresse des Datenfeldes zurück,
+        in dem das Ende des Fade-Out ausgelesen werden kann.
+        Pointer to DATA --- A0
+        DATA + 0.w Fadeende (0=Ende)
+
+        + 84 PLAYPATT1 Spielt einzelnes Pattern aus dem Songfile.
+        D0.w = xxyy (xx = Patternnummer, yy = transpose)
+
+        + 88 PLAYPATT2 Spielt einzelnes Pattern außerhalb des Songfiles.
+        Die Adresse des gewünschten zusätzlichen Pattern wird in A0 überge-
+        ben.
+        D0.w = ..yy (yy = Transpose)
+        A0.l = Adresse des Patterns
+
+        + 96 PLAYCONT Dient zum Fortsetzen eines SONGs nachdem ein
+        anderer Song gestartet wurde).
+
+
+        1. Das Maschinenprogramm muß folgende Daten in reservierte Spei-
+        cherbereiche laden:
+
+        - Den Player
+
+        - Die Musikdaten des gewünschten Songs (z.B. "mdat.TITEL")
+
+        - Die Sampledatendes Songs ("smpl.TITEL" - muß im Chipram liegen !)
+
+        
+        2. Sie müssen dem Player die Adressen der Daten mitteilen.
+
+        - Die Anfangsadresse des Musikdaten wird in D0 abgeleft, die
+        Anfangsadresse der Samples in D1.
+
+        - Rufen Sie den Einsprung "INITDATA" (Offset +52) mit einem "JSR"
+        auf
+
+
+        3. Der Player muß jetzt einmal pro Bildschirmaufbau aufgerufen
+        werden (50*pro Sekunde). Dazu gibt es zwei Möglichkeiten:
+
+        - 1. Ihr Programm ruft die Routine "IRQIN" einmal pro Bildschirmauf-
+        bau auf.
+
+        - 2. Sie installieren mit Hilfe der Routine "VBION" die interne
+        Vertical-Blank-Routine. Diese ruft dann automatisch "IRQIN" auf,
+        benutzt jedoch den Betriebsystem-VBI.
+
+
+        4. Sie wählen einen Song aus:
+
+        - die gewünscht Songnummer wird in D0 abgelegt und die Routine
+        "SONGPLAY" aufgerufen.
+
+        Der Song spielt jetzt 
+
+
+        5. Soundeffekte:
+
+        + 92 FXPLAY Diese Routine started einen Soundeffekt. Die Nummer
+        des Effekts muß in D0.w übergeben werden.
+
+
+        6. Fade.Out:
+
+        - Um eine Song auszublenden, benötigen Sie folgende Routine:
+
+                        MOVE.l #$00xx0000,D0
+                        JSR TFMX + 72  ;= Fadein/out
+                        JSR TFMX + 76  ;= Get Info
+            TESTFADE:
+                        TST.w (A0)
+                        BNE.s TESTFADE ; Das Fade wurde nun abgeschlossen
+

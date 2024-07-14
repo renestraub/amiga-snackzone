@@ -1,0 +1,176 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+	>>>> DISKETTEN-INHALT SNACKZONE V1.00 <<<<
+	>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+
+     Libs (dir)
+       arp.library                      icon.library
+     S (dir)
+       Startup-Sequence                 
+     C (dir)
+       EndCLI                           EndIf
+       If                               LoadWB
+       SetAMIGA                         TestKick
+     Devs (dir)
+       System-Configuration             WB20.Con
+     Game (dir)
+       Abspann1                         Abspann2
+       Abspann3                         Abspann4
+       Abspann5                         Abspann6
+       Abspann7                         ArtDept
+       Automat                          BGround.LBM
+       BiFi.MDA                         BiFi.SMP
+       Char1                            Char11
+       Char20                           Chars.LBM
+       Disco                            DiscoBack
+       FahrKarte                        FutureBobs
+       GegenBobs                        Hero
+       HeroBig                          ImmerBobs
+       Intro                            Karte
+       Kino                             Kiosk
+       Kneipe                           Level1
+       Level11                          Level12
+       Level13                          Level14
+       Level15                          Level16
+       Level17                          Level18
+       Level2                           Level20
+       Level3                           Level4
+       Level5                           Level6
+       Level7                           Level8
+       Levels.TXT                       Lift
+       MainPrg                          Mann
+       Menu                             PaintAni.LBM
+       Painter.INI                      Painter.TXT
+       PaintPrg                         PaintTex.LBM
+       Panel                            PanelBobs
+       SkaterBobs                       SkatingPanel
+       SnackZone                        SnackZone.info
+       SokBG.LBM                        SokGfx1.lbm
+       SokGfx2.lbm                      SokLevs.txt
+       Sokoban                          StromPrg
+       Supermarkt                       Tankstelle
+       TfMx.OBJ                         UBahn
+       UBahn2                           Zeitmaschine
+  Disk.info                        Game.info
+  HD-Install                       HD-Install.info
+
+	>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<
+	>>>> FILELAENGEN SNACKZONE V1.00 <<<<
+	>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<
+
+Directory "df0:" on Donnerstag 15-Apr-93 
+Game.info                    632 ----rw-d Dienstag   11:25:41
+Libs                         Dir ----rwed Gestern    10:34:16
+S                            Dir ----rwed Gestern    10:34:20
+Disk.info                    388 ----rw-d Gestern    10:44:19
+HD-Install                 30248 ----rwed Dienstag   11:36:15
+HD-Install.info              698 ----rw-d Dienstag   14:57:27
+C                            Dir ----rwed Gestern    10:31:18
+Devs                         Dir ----rwed Gestern    10:31:24
+Game                         Dir ----rwed Gestern    18:08:58
+4 files - 5 directories - 76 blocks used
+
+Directory "df0:Libs" on Donnerstag 15-Apr-93 
+arp.library                17100 ----rw-d 01-Mär-92  16:32:06
+icon.library                5688 ----rw-- 06-Okt-91  12:11:25
+2 files - 50 blocks used
+
+Directory "df0:S" on Donnerstag 15-Apr-93 
+Startup-Sequence              79 ----rwed Sonntag    21:36:39
+1 file - 2 blocks used
+
+Directory "df0:C" on Donnerstag 15-Apr-93 
+LoadWB                      2804 ----rwe- 06-Okt-91  12:05:46
+SetAMIGA                    1900 ----rwe- 02-Nov-91  21:14:17
+If                          1656 ----rwe- 02-Nov-91  13:29:49
+EndIf                         40 ----rwe- 02-Nov-91  13:29:54
+EndCLI                       692 --p-rwe- 06-Okt-91  12:05:42
+TestKick                      56 ----rwe- 02-Nov-91  13:28:31
+6 files - 24 blocks used
+
+Directory "df0:Devs" on Donnerstag 15-Apr-93 
+System-Configuration         232 ----rw-- 06-Okt-91  12:05:47
+WB20.Con                     232 ----rw-- 02-Nov-91  21:11:01
+2 files - 4 blocks used
+
+Directory "df0:Game" on Donnerstag 15-Apr-93 
+Karte                      37976 ----rwed 07-Apr-93  09:43:25
+Intro                      28136 ----rwed Gestern    18:08:53
+ImmerBobs                   8768 ----rwed Gestern    18:08:59
+HeroBig                     8556 ----rwed Dienstag   14:45:43
+Hero                        5032 ----rwed Dienstag   14:41:02
+GegenBobs                  39376 ----rwed Dienstag   14:27:09
+FutureBobs                 18864 ----rwed Dienstag   14:31:59
+FahrKarte                   5340 ----rwed 07-Apr-93  09:32:20
+DiscoBack                   4272 ----rwed Samstag    20:52:28
+Disco                       7720 ----rwed Samstag    20:52:23
+Chars.LBM                   4376 ----rwed Montag     13:04:37
+Char20                     19848 ----rwed Samstag    12:23:34
+Char11                     17520 ----rwed 06-Apr-93  16:52:07
+Char1                      22044 ----rwed 07-Apr-93  10:56:54
+BiFi.SMP                   46284 ----rwed 06-Apr-93  21:45:44
+BiFi.MDA                   11584 ----rwed 06-Apr-93  22:11:08
+BGround.LBM                 9844 ----rwed Montag     13:04:37
+Automat                     6012 ----rwed 05-Apr-93  16:45:18
+Abspann7                    5160 ----rwed Dienstag   13:53:32
+Abspann6                    3280 ----rwed Dienstag   13:53:26
+Abspann5                    3676 ----rwed Dienstag   13:53:19
+Abspann4                    3472 ----rwed Dienstag   13:53:14
+Abspann3                     752 ----rwed Dienstag   13:53:08
+Abspann2                    5844 ----rwed Dienstag   13:53:01
+Abspann1                    8484 ----rwed Dienstag   13:52:55
+ArtDept                    14064 ----rwed Gestern    18:08:45
+MainPrg                    34924 ----rwed Gestern    18:08:31
+Zeitmaschine               29184 ----rwed 07-Apr-93  18:36:41
+UBahn2                      8264 ----rwed 05-Apr-93  17:09:20
+UBahn                       7680 ----rwed 05-Apr-93  15:48:25
+TfMx.OBJ                    3344 ----rwed 07-Apr-93  10:57:35
+Tankstelle                 14216 ----rwed 06-Apr-93  16:31:35
+Supermarkt                 16876 ----rwed 06-Apr-93  16:31:44
+StromPrg                   12456 ----rwed Montag     13:05:20
+Sokoban                     9256 ----rwed Montag     14:37:01
+SokLevs.txt                 3296 ----rwed Montag     14:35:28
+SokGfx2.lbm                28020 ----rwed Montag     14:35:28
+SokGfx1.lbm                14020 ----rwed Montag     14:35:27
+SokBG.LBM                   3820 ----rwed Montag     14:35:27
+SnackZone.info              1574 ----rw-d Dienstag   11:17:58
+SnackZone                  17084 ----rwed Dienstag   11:16:09
+SkatingPanel                1408 ----rwed Dienstag   14:48:41
+SkaterBobs                 10960 ----rwed Dienstag   14:27:58
+PanelBobs                   7312 ----rwed Dienstag   14:27:44
+Panel                       1348 ----rwed Samstag    20:54:44
+PaintTex.LBM                7240 ----rwed Montag     12:56:13
+PaintPrg                   10708 ----rwed Montag     13:05:02
+Painter.TXT                  488 ----rwed Montag     12:56:13
+Painter.INI                  660 ----rwed Montag     12:56:13
+PaintAni.LBM                3644 ----rwed Montag     12:56:13
+Menu                       13264 ----rwed Samstag    20:54:11
+Mann                       18208 ----rwed 07-Apr-93  18:38:20
+Lift                       11272 ----rwed 07-Apr-93  18:37:46
+Levels.TXT                  1788 ----rwed Montag     13:04:38
+Level8                       296 ----rwed Samstag    22:27:40
+Level7                       348 ----rwed Samstag    22:27:34
+Level6                       428 ----rwed Samstag    22:27:27
+Level5                       404 ----rwed Samstag    22:27:23
+Level4                       856 ----rwed Samstag    22:27:18
+Level3                       848 ----rwed Samstag    22:27:12
+Level20                      896 ----rwed Samstag    22:29:47
+Level2                       624 ----rwed Samstag    22:26:39
+Level18                      336 ----rwed Samstag    22:26:31
+Level17                      344 ----rwed Samstag    22:26:27
+Level16                      476 ----rwed Samstag    22:26:22
+Level15                      500 ----rwed Samstag    22:26:15
+Level14                      848 ----rwed Samstag    22:26:10
+Level13                      732 ----rwed Samstag    22:26:04
+Level12                      660 ----rwed Samstag    22:25:59
+Level11                      724 ----rwed Samstag    22:25:53
+Level1                       660 ----rwed Samstag    22:25:47
+Kneipe                     22736 ----rwed 06-Apr-93  17:50:43
+Kiosk                      19092 ----rwed 05-Apr-93  17:09:30
+Kino                       30456 ----rwed Montag     14:45:06
+74 files - 1580 blocks used
+
+TOTAL: 89 files - 5 directories - 1736 blocks used
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

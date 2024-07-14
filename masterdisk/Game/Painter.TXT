@@ -1,0 +1,18 @@
+ Deine Aufgabe ist, alle Kaestchen ein-
+ zufaerben. Ein Kaestchen wird einge-
+ faerbt, indem man ueber alle vier
+ Seiten laeuft.                   
+ 
+ Die Spielfigur wird mit dem Joystick
+ gesteuert. Das Spiel kann mit <ESC> 
+ vorzeitig abgebrochen werden.
+ 
+ Sei vorsichtig, dass Du die Snack-
+ monster nicht beruehrst, sonst ist das 
+ Spiel sofort verloren.
+ 
+ Den Highscore kannst Du schlagen, wenn
+ Du das Spiel moeglichst schnell loest.
+
+ Druecke FEUER um das Spiel zu starten!
+$END
